@@ -1,19 +1,19 @@
-#include "smtp.h"
+ï»¿#include "smtp.h"
 
 int main()
 {
 	/*
-		ÓÃ·¨£ºÒÔQQÓÊÏäÎªÀý£¬ÔÚÉèÖÃ½çÃæ´ò¿ªIMAP/SMTP·þÎñ²¢Éú³ÉÊÚÈ¨Âë£¬½«ÊÚÈ¨ÂëÌîÐ´ÔÚÃÜÂë´¦¼´¿É·¢ËÍÓÊ¼þ
+		ç”¨æ³•ï¼šä»¥QQé‚®ç®±ä¸ºä¾‹ï¼Œåœ¨è®¾ç½®ç•Œé¢æ‰“å¼€IMAP/SMTPæœåŠ¡å¹¶ç”ŸæˆæŽˆæƒç ï¼Œå°†æŽˆæƒç å¡«å†™åœ¨å¯†ç å¤„å³å¯å‘é€é‚®ä»¶
 	*/
 
 	Smtp smtp(
-		25,					// smtp¶Ë¿Ú
-		"smtp.qq.com",		// smtp·þÎñÆ÷µØÖ·
-		"from@qq.com",		// ·¢ËÍÕßÓÊÏäµØÖ·
-		"password",			// ·¢ËÍÕßÓÊÏäÃÜÂë»òsmtpÐí¿ÉÖ¤ÐòÁÐºÅ
-		"to@qq.com",		// ½ÓÊÕÕßÓÊÏäµØÖ·
-		"title",			// ÓÊ¼þÖ÷Ìâ
-		"Òª·¢ËÍµÄÄÚÈÝ"		// ÓÊ¼þÕýÎÄ
+		25,					// smtpç«¯å£
+		"smtp.qq.com",		// smtpæœåŠ¡å™¨åœ°å€
+		"from@qq.com",		// å‘é€è€…é‚®ç®±åœ°å€
+		"password",			// å‘é€è€…é‚®ç®±å¯†ç æˆ–smtpè®¸å¯è¯åºåˆ—å·
+		"to@qq.com",		// æŽ¥æ”¶è€…é‚®ç®±åœ°å€
+		"title",			// é‚®ä»¶ä¸»é¢˜
+		"è¦å‘é€çš„å†…å®¹"		// é‚®ä»¶æ­£æ–‡
 	);
 
 	int error = 0;
@@ -22,13 +22,13 @@ int main()
 		switch (error)
 		{
 		case 1:
-			std::cout << "´íÎó1£ºÓÉÓÚÍøÂç²»Í¨³©£¬·¢ËÍÊ§°Ü£¡" << std::endl; break;
+			std::cout << "é”™è¯¯1ï¼šç”±äºŽç½‘ç»œä¸é€šç•…ï¼Œå‘é€å¤±è´¥ï¼" << std::endl; break;
 		case 2:
-			std::cout << "´íÎó2£ºÓÃ»§Ãû´íÎó£¬ÇëºË¶Ô£¡" << std::endl; break;
+			std::cout << "é”™è¯¯2ï¼šç”¨æˆ·åé”™è¯¯ï¼Œè¯·æ ¸å¯¹ï¼" << std::endl; break;
 		case 3:
-			std::cout << "´íÎó3£ºÓÃ»§ÃÜÂë´íÎó£¬ÇëºË¶Ô£¡" << std::endl; break;
+			std::cout << "é”™è¯¯3ï¼šç”¨æˆ·å¯†ç é”™è¯¯ï¼Œè¯·æ ¸å¯¹ï¼" << std::endl; break;
 		case 4:
-			std::cout << "´íÎó4£ºÇë¼ì²é¸½¼þÄ¿Â¼ÊÇ·ñÕýÈ·£¬ÒÔ¼°ÎÄ¼þÊÇ·ñ´æÔÚ£¡" << std::endl; break;
+			std::cout << "é”™è¯¯4ï¼šè¯·æ£€æŸ¥é™„ä»¶ç›®å½•æ˜¯å¦æ­£ç¡®ï¼Œä»¥åŠæ–‡ä»¶æ˜¯å¦å­˜åœ¨ï¼" << std::endl; break;
 		default:
 			break;
 		}

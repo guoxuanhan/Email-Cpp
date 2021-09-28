@@ -1,4 +1,4 @@
-#include <fstream>
+ï»¿#include <fstream>
 #include "smtp.h"
 
 Smtp::Smtp()
@@ -23,13 +23,13 @@ Smtp::Smtp()
 }
 
 Smtp::Smtp(
-	int port,					// smtp¶Ë¿Ú£¨Ä¬ÈÏ25£©
-	std::string strDomain,		// smtp·şÎñÆ÷ÓòÃû£¨Ä¬ÈÏsmtp.qq.com£©
-	std::string userName,		// ÓÃ»§Ãû
-	std::string userPwd,		// ÃÜÂë
-	std::string targetEmail,	// Ä¿µÄÓÊ¼şµØÖ·
-	std::string title,			// Ö÷Ìâ
-	std::string content			// ÄÚÈİ
+	int port,					// smtpç«¯å£ï¼ˆé»˜è®¤25ï¼‰
+	std::string strDomain,		// smtpæœåŠ¡å™¨åŸŸåï¼ˆé»˜è®¤smtp.qq.comï¼‰
+	std::string userName,		// ç”¨æˆ·å
+	std::string userPwd,		// å¯†ç 
+	std::string targetEmail,	// ç›®çš„é‚®ä»¶åœ°å€
+	std::string title,			// ä¸»é¢˜
+	std::string content			// å†…å®¹
 )
 {
 	_port = port;
